@@ -1,0 +1,64 @@
+{
+  "name": "generator-poi-boilerplate-demo",
+  "version": "1.0.0",
+  "description": "Demo React Component from POI boilerplate generator",
+  "main": "src/js/export.js",
+  "scripts": {
+    "prepublish": "poi build",
+    "demo:deploy": "gh-pages -d dist",
+    "build": "poi build",
+    "postbuild": "rm -rf dist/**/*.{css,js}.map",
+    "serve:dist": "http-server dist",
+    "start": "poi",
+    "watch": "poi watch",
+    "test": "NODE_ENV=test nyc --require babel-register --require babel-polyfill --reporter=lcov --reporter=text-summary mocha ./tests/unit/**/*.spec.js --require ./tests/setup.js",
+    "tdd": "npm run test -- --watch"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/willmendesneto/generator-poi-boilerplate-demo.git"
+  },
+  "author": "Will Mendes &lt;willmendesneto@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/willmendesneto/generator-poi-boilerplate-demo/issues"
+  },
+  "homepage": "https://github.com/willmendesneto/generator-poi-boilerplate-demo#readme",
+  "devDependencies": {
+    "babel-plugin-react-require": "^3.0.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-react-app": "^3.1.0",
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
+    "css-modules-require-hook": "^4.2.2",
+    "enzyme": "^3.2.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "gh-pages": "^1.1.0",
+    "http-server": "^0.10.0",
+    "jsdom": "^11.5.1",
+    "mocha": "^4.0.1",
+    "node-sass": "^4.7.2",
+    "nyc": "^11.3.0",
+    "poi": "^9.6.1",
+    "sass-loader": "^6.0.6"
+  },
+  "dependencies": {
+    "glamor": "^2.20.40",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "peerDependencies": {
+    "react": "^0.14.8 || ^15.4.2",
+    "react-dom": "^0.14.8 || ^15.4.2"
+  },
+  "nyc": {
+    "lines": 0,
+    "statements": 0,
+    "functions": 0,
+    "branches": 0
+  }
+}
