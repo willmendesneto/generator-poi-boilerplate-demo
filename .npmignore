@@ -4,5 +4,3 @@ coverage
 test
 index.ejs
 poi.config.js
-dist/css/*.css.map
-dist/js/*.js.map

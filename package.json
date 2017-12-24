@@ -4,7 +4,7 @@
   "description": "Demo React Component from POI boilerplate generator",
   "main": "src/js/export.js",
   "scripts": {
-    "prepublish": "npm run build -- --no-sourceMap --no-html",
+    "prepublish": "npm run build",
     "demo:deploy": "npm run build -- --no-sourceMap && gh-pages -d dist",
     "build": "NODE_ENV=production poi build",
     "serve:dist": "http-server dist",

@@ -11,3 +11,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Adding new `HowToUse` component
 - Adding github badge integration
 
+## Fixed
+- Fixing publish issue
+
