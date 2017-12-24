@@ -11,8 +11,6 @@ const subHeading = css({
 const list = css({
   listStyle: 'circle inside',
   marginLeft: '1em',
-  fontSize: '16px',
-  lineHeight: '20px',
 })
 
 const code = css({
@@ -21,11 +19,10 @@ const code = css({
 
 const HowToStart = () => (
   <Fragment>
-    <h2 className={`${subHeading}`}>Next steps to get started:</h2>
+    <h2 className={`${subHeading}`}>Next steps to use `generator-poi-boilerplate-demo`:</h2>
     <ul className={`${list}`}>
-      <li>Toggle the different fixtures on the left</li>
-      <li>Edit this file: <code className={`${code}`}>src/js/components/your-component-name.js</code></li>
-      <li>Edit the styles: <code className={`${code}`}>src/scss/your-component-name.scss</code></li>
+      <li>Edit this file: <code className={`${code}`}>src/index.js</code></li>
+      <li>Add your react component</li>
     </ul>
   </Fragment>
 )

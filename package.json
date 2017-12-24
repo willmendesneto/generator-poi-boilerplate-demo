@@ -4,10 +4,9 @@
   "description": "Demo React Component from POI boilerplate generator",
   "main": "src/js/export.js",
   "scripts": {
-    "prepublish": "poi build",
-    "demo:deploy": "gh-pages -d dist",
-    "build": "poi build",
-    "postbuild": "rm -rf dist/**/*.{css,js}.map",
+    "prepublish": "npm run build -- --no-sourceMap --no-html",
+    "demo:deploy": "npm run build -- --no-sourceMap && gh-pages -d dist",
+    "build": "NODE_ENV=production poi build",
     "serve:dist": "http-server dist",
     "start": "poi",
     "watch": "poi watch",
@@ -48,8 +47,10 @@
   },
   "dependencies": {
     "glamor": "^2.20.40",
+    "prop-types": "^15.6.0",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "react-github-corner": "^2.0.0"
   },
   "peerDependencies": {
     "react": "^0.14.8 || ^15.4.2",

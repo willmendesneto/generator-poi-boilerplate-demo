@@ -7,3 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased][]
 ### Added
 - Created fe-co-my-component
+- Adding new `HowToStart` for children component
+- Adding new `HowToUse` component
+- Adding github badge integration
+

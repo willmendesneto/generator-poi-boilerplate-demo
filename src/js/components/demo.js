@@ -1,14 +1,18 @@
 import React, { Fragment } from 'react'
+import PropTypes from 'prop-types'
 
 import { css } from 'glamor'
 
-import HowToStart from './how-to-start'
+import HowToUse from './how-to-use'
+import GithubCorner from 'react-github-corner'
 
 const demoHeader = css({
   display: 'flex',
   padding: '10px',
   backgroundColor: '#fff',
   borderBottom: '1px solid #d5d8db',
+  fontFamily: 'monospace',
+  color: '#3a3939',
 })
 
 const demoMainWrapper = css({
@@ -25,22 +29,31 @@ const demoFooter = css({
   width: '100%',
   padding: '10px',
   backgroundColor: '#fff',
+  borderTop: '1px solid #d5d8db',
   position: 'fixed',
   bottom: 0,
 })
 
-const Demo = ({ children }) => (
+const Demo = ({ children, repositoryUrl, title, description }) => (
   <Fragment>
     <header className={`${demoHeader}`}>
-      <h1>Component Demo Page</h1>
+      <GithubCorner href={repositoryUrl} />
+      <h1>{title}</h1>
     </header>
     <main className={`${demoMainWrapper}`}>
-      { children || <HowToStart /> }
+      { children || <HowToUse /> }
     </main>
     <footer className={`${demoFooter}`}>
       <p>Built with ❤ by @willmendesneto</p>
     </footer>
   </Fragment>
 )
+
+Demo.propTypes = {
+  repositoryUrl: PropTypes.string,
+  title: PropTypes.string,
+  description: PropTypes.string,
+  children: PropTypes.node,
+};
 
 export default Demo

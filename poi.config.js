@@ -1,6 +1,8 @@
+const { name, description } = require('./package.json')
+
 module.exports = {
   html: {
-    title: 'generator-poi-boilerplate-demo - Demo React Component from POI boilerplate generator',
+    title: `${name} | ${description}`,
     template: './index.ejs',
   },
   filename: {

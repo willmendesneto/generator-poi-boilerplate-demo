@@ -3,7 +3,7 @@ import { expect } from 'chai'
 import { shallow } from 'enzyme'
 import Demo from '../../src/js/components/demo'
 
-describe('my-component.js', () => {
+describe('demo.js', () => {
   let wrapper
 
   before(() => {
@@ -27,6 +27,6 @@ describe('my-component.js', () => {
   })
 
   it('should renders the content', () => {
-    expect(wrapper.find('.test-container').text()).to.eql('my MyComponent content')
+    expect(wrapper.find('.test-container').text()).to.eql('my Demo content')
   })
 })
