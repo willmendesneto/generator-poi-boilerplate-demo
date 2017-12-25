@@ -6,10 +6,10 @@
   "scripts": {
     "prepublish": "npm run build:library",
     "demo:deploy": "npm run build:page -- --no-sourceMap && gh-pages -d dist",
-    "build:page": "NODE_ENV=production poi build",
+    "build:page": "NODE_ENV=production poi build --storybook",
     "build:library": "NODE_ENV=production poi build src/js/export.js --format cjs --filename.js client.js --no-sourceMap --no-html",
     "serve:dist": "npm run build:page && http-server dist",
-    "start": "poi",
+    "start": "poi --storybook",
     "watch": "poi watch",
     "test": "NODE_ENV=test nyc --require babel-register --require babel-polyfill --reporter=lcov --reporter=text-summary mocha ./tests/unit/**/*.spec.js --require ./tests/setup.js",
     "tdd": "npm run test -- --watch"
@@ -29,6 +29,8 @@
   },
   "homepage": "https://github.com/willmendesneto/generator-poi-boilerplate-demo#readme",
   "devDependencies": {
+    "@storybook/addon-a11y": "^3.2.19",
+    "@storybook/addon-options": "^3.2.19",
     "babel-plugin-react-require": "^3.0.0",
     "babel-polyfill": "^6.26.0",
     "babel-preset-react-app": "^3.1.0",
@@ -37,6 +39,7 @@
     "css-modules-require-hook": "^4.2.2",
     "enzyme": "^3.2.0",
     "enzyme-adapter-react-16": "^1.1.1",
+    "generator-poi-boilerplate-demo": "^1.1.2",
     "gh-pages": "^1.1.0",
     "http-server": "^0.10.0",
     "jsdom": "^11.5.1",
@@ -44,14 +47,16 @@
     "node-sass": "^4.7.2",
     "nyc": "^11.3.0",
     "poi": "^9.6.1",
-    "sass-loader": "^6.0.6"
+    "poi-preset-storybook": "^0.1.2",
+    "sass-loader": "^6.0.6",
+    "storybook-addon-jsx": "^5.1.0",
+    "storybook-react": "^3.2.16"
   },
   "dependencies": {
     "glamor": "^2.20.40",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-github-corner": "^2.0.0"
+    "react-dom": "^16.2.0"
   },
   "peerDependencies": {
     "react": "^0.14.8 || ^15.4.2",

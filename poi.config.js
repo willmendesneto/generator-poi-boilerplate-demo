@@ -3,12 +3,17 @@ const { name, description } = require('./package.json')
 module.exports = {
   html: {
     title: `${name} | ${description}`,
-    template: './index.ejs',
   },
   filename: {
     js: 'js/[name].js',
     css: 'css/style.css',
   },
-  entry: './index.js',
+  entry: [
+    'storybook/config.js',
+    'storybook/addons.js'
+  ],
+  presets: [
+    require('poi-preset-storybook')()
+  ],
   removeDist: true,
 }
