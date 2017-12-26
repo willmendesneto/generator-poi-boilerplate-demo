@@ -1,20 +1,17 @@
-import { storiesOf, setAddon } from 'storybook-react'
-import JSXAddon from 'storybook-addon-jsx';
+import { storiesOf } from 'storybook-react'
 
 import { Demo, HowToStart } from './src/js/export'
 import { homepage, name, description } from './package.json'
 
-setAddon(JSXAddon)
-
 storiesOf('Demo', module)
-  .addWithJSX('Without a children component', () => 
+  .add('Without a children component', () => 
     <Demo
       title={name}
       description={description}
       repositoryUrl={homepage}
     />
   )
-  .addWithJSX('With a children component', () => 
+  .add('With a children component', () => 
     <Demo
       title={name}
       description={description}
@@ -25,4 +22,4 @@ storiesOf('Demo', module)
   )
 
 storiesOf('HowToStart', module)
-  .addWithJSX('Default', () => <HowToStart/>)
+  .add('Default', () => <HowToStart/>)

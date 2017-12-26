@@ -10,6 +10,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Adding new `HowToStart` for children component
 - Adding new `HowToUse` component
 - Adding github badge integration
+- Splitting tasks between page and library
+- Upgrading `generator-poi` to 2.1.1
+- Using `react-storybook` for demo pages
 
 ## Fixed
 - Fixing publish issue
