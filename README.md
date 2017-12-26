@@ -1,5 +1,7 @@
 # generator-poi-boilerplate-demo 
 
+> Demo React Component from POI boilerplate generator
+
 
 ## Usage
 
