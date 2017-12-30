@@ -1,6 +1,6 @@
 {
   "name": "generator-poi-boilerplate-demo",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Demo React Component from POI boilerplate generator",
   "main": "dist/client.js",
   "scripts": {
