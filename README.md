@@ -39,6 +39,7 @@ This project is using `np` as publisher helper. For more information, please che
 - `npm run test`: Running unit tests using MochaJS
 - `npm run tdd`: Running unit tests using MochaJS in watch mode. It will help you to create a component using [`Test Driven Development` approach](https://en.wikipedia.org/wiki/Test-driven_development)
 
+
 ## Changes and history
 
 See [CHANGELOG.md](./CHANGELOG.md).
